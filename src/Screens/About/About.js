@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Image,Button} from 'react-native';
 import { Icon, Container, Header, Content, Left } from 'native-base'
 import { Dialog } from 'react-native-simple-dialogs'; 
+import CustomHeader from '../../components/Header/CustomHeader';
 
 class About extends Component {
     

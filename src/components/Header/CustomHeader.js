@@ -63,7 +63,8 @@ class CustomHeader extends Component {
                         // onPress={() => navigation.openDrawer()}>
 
                         >
-                            <Icon name="menu" />
+                            <Icon name="menu" 
+                            style={{bottom:15}}/>
                         </Button>
                         {/* <Button
                             transparent

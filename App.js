@@ -75,7 +75,7 @@ const AppStackNavigator = createStackNavigator({
 
   // StudentTabNavigator:{
   //   screen:StudentDrawerNavigation
-  // }
+  // },
   // ,
   // Splash:{
   //   screen:Splash

@@ -12,10 +12,10 @@ const TabNavigation = createMaterialTopTabNavigator({
     Subject:{
         screen:Subject,
         navigationOptions: {
-            tabBarLabel: "Schedule",
+            tabBarLabel: "Classes",
             tabBarIcon: ({ tintColor }) => (
                 <IconIonic
-                    name="md-book"
+                    name="logo-buffer"
                     size={30}
                     color={tintColor} />
             )
@@ -65,6 +65,9 @@ const TabNavigation = createMaterialTopTabNavigator({
     // initialRouteName:'Notice',
     animationEnabled:true,
     tabBarOptions: {
+        indicatorStyle: {
+                    backgroundColor: 'white',
+                },
         activeBackgroundColor:'red',
         //activeTintColor:'red',
         //inactiveBackgroundColor:'green',

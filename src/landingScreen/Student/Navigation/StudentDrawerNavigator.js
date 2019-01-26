@@ -98,35 +98,68 @@ const CustomerDrawerContentComponent = (props) => (
 
 const MyDrawer =  createDrawerNavigator({
   Home: {
+        //screen: StudentTabNavigator, 
         screen: StudentTabNavigator, 
         navigationOptions: {
           drawerLabel: 'Home',
-          drawerIcon: ({ tintColor }) => <Icon name="cog" size={17} />,
+          drawerIcon: ({ tintColor }) => <Icon name="home" size={17} color="blue"/>,
         }
       },
   Chat: {
-    screen: Chat
+    screen: Chat,
+    navigationOptions: {
+      drawerLabel: 'Chat',
+      drawerIcon: ({ tintColor }) => <Icon name="mail-open" size={17} color="#304ffe"/>,
+    }
   },
   Logout: {
-    screen: Logout
+    screen: Logout,
+    navigationOptions: {
+      drawerLabel: 'Logout',
+      drawerIcon: ({ tintColor }) => <Icon name="power" size={17} color="#304ffe"/>,
+    }
   },
   Exit: {
-    screen: Exit
+    screen: Exit,
+    navigationOptions: {
+      drawerLabel: 'Exit',
+      drawerIcon: ({ tintColor }) => <Icon name="exit" size={17} color="#304ffe"/>,
+    }
   },
   Settings:{
-    screen: Settings
+    screen: Settings,
+    navigationOptions: {
+      drawerLabel: 'Settings',
+      drawerIcon: ({ tintColor }) => <Icon name="settings" size={17} color="#304ffe"/>,
+    }
   },
   Help:{
-    screen: Help
+    screen: Help,
+    navigationOptions: {
+      drawerLabel: 'Help',
+      drawerIcon: ({ tintColor }) => <Icon name="help" size={17} color="#304ffe"/>,
+    }
   },
   Share:{
-    screen: Share
+    screen: Share,
+    navigationOptions: {
+      drawerLabel: 'Share',
+      drawerIcon: ({ tintColor }) => <Icon name="share" size={17} color="#304ffe"/>,
+    }
   },
   About:{
-    screen: About
+    screen: About,
+    navigationOptions: {
+      drawerLabel: 'About',
+      drawerIcon: ({ tintColor }) => <Icon name="information" size={17} color="#304ffe"/>,
+    }
   },
   Rate:{
-    screen: Rate
+    screen: Rate,
+    navigationOptions: {
+      drawerLabel: 'Rate',
+      drawerIcon: ({ tintColor }) => <Icon name="star" size={17} color="#304ffe"/>,
+    }
   },
 
 },{

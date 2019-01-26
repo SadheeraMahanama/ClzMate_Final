@@ -1,8 +1,8 @@
 export default{
     black:'#000000',
     white:'#ffffff',
-    greenDark:'#1A237E', //header color
-    greenPrimary:'#283593', //nav color
+    greenDark:'#283593 ', //header color
+    greenPrimary:'#303f9f', //nav color
     darkOrange:'#d93900',
     lightGray:'#d8d8d8',
     pink:"#fc4c54",

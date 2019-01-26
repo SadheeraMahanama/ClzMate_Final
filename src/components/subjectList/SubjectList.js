@@ -12,42 +12,11 @@ import {View,
 import { Card, ListItem, Button, Header } from 'react-native-elements'
 import colors from '../../styles/colors';
 import { withNavigation } from 'react-navigation';
-// import { Button } from 'react-native-elements'
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 
 
-const data = [
-    {
-        subject: "Combine Maths"
-    },
 
-    {
-        subject: "Chemistry"
-    },
-
-    {
-        subject: "Physics"
-    },
-
-    {
-        subject: "General English"
-    },
-
-    {
-        subject: "ICT"
-    },
-
-    {
-        subject: "GIT"
-    },
-
-    {
-        subject: "English"
-    },
-
-    {
-        subject: "rn"
-    },
-];
+ 
 
 const formatData = (data, numColumns)=>{
     const numberOfFullRows = Math.floor(data.length / numColumns);
@@ -172,18 +141,27 @@ class SubjectList extends Component{
                 <View style={styles.activityIndicator}>
                     <ActivityIndicator size="large" color="black"/>
                 </View>
+
+                // <View style={styles.activityIndicator}>
+                //     <EvilIcons
+                //     name="md-ei-spinner-2"
+                //     size={30}
+                //       />
+                // </View>
             )
         }        
         else{
             console.log("@ else part in subject list");
             let classes = this.state.subjects.clzes.map((val, key) => {
                 return(
-                    <View key={key} >
+                    <View key={key}>
                     <View style={styles.sub}>
                         <Button
                             large
                             rightIcon={{name: 'code'}}
                             title={val.subjectName} 
+                            backgroundColor='#3949ab'
+                             //color='black'  
                         />
                     </View>
                     
@@ -199,7 +177,7 @@ class SubjectList extends Component{
         return(
 
             <View>
-                <Text>Hello</Text>
+            
                 {classes}
             </View>
             
@@ -221,27 +199,35 @@ const styles = StyleSheet.create({
         flex:1,
         // marginVertical :20,
     },
+
+    // activityIndicator:{
+    //     //flex:1,
+    //     justifyContent:'center',
+    //     alignItems:'center'
+    // },
     
-    item:{
-        // backgroundColor:colors.subject_list,
-        backgroundColor:"red",
-        alignItems:'center',
-        justifyContent:'center',
-        flex:1,
-        margin:1,
-        height: Dimensions.get('window').width/numColumns, //approximate a square
-    },
+    // item:{
+    //     // backgroundColor:colors.subject_list,
+    //     backgroundColor:"red",
+    //     alignItems:'center',
+    //     justifyContent:'center',
+    //     flex:1,
+    //     margin:1,
+    //     height: Dimensions.get('window').width/numColumns, //approximate a square
+    // },
 
-    itemInvisible:{
-        backgroundColor:'transparent'
-    },
+    // itemInvisible:{
+    //     backgroundColor:'transparent'
+    // },
 
-    itemText:{
-        color:'#fff'
-    },
+    // itemText:{
+    //     color:'#fff'
+    // },
 
     sub:{
-         marginBottom: 10,
+       // marginTop:10,
+        marginBottom: 10,
+         
     },
 
     // containerWait: {
