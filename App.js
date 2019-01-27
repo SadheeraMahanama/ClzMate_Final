@@ -21,6 +21,7 @@ import Results from './src/Screens/Subject/SubjectDetails/Results/Results';
 import StudyMaterial from './src/Screens/Subject/SubjectDetails/StudyMaterial/StudyMaterial';
 import TestTimeLine from './src/Temp/TestTimeLine';
 import Assigment from './src/Screens/Subject/SubjectDetails/Assigments/Assigment';
+import Chat from './src/Screens/Chat/Chat';
 export default class App extends Component{
   render() {
     return (
@@ -115,6 +116,10 @@ const AppStackNavigator = createStackNavigator({
   Results:{
       screen:Results
   },
+
+  chat:{
+    screen:Chat
+  }
 
   // Teacher:{
   //     screen:Teacher

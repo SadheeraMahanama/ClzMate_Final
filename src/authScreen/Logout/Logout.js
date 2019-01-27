@@ -13,7 +13,7 @@ class Logout extends Component{
 
     constructor(props){
         super(props);
-        // this.getToken();
+        this.getToken();
         this.getDecision();
       }
       state={
@@ -43,23 +43,23 @@ class Logout extends Component{
         )
     }
 
-    // async getToken(){
-    //     try{
-    //       let thistoken=await AsyncStorage.getItem("token");
-    //       console.log("In Logout Function : "+thistoken+" ********** ")
-    //      // let token=JSON.stringify(thistoken)
+    async getToken(){
+        try{
+          let thistoken=await AsyncStorage.getItem("token");
+          console.log("In Logout Function : "+thistoken+" ********** ")
+         // let token=JSON.stringify(thistoken)
 
-    //       //alert(a)
-    //       if(thistoken!=null){
-    //         this.handletoken(thistoken);
-    //       }else{
-    //         this.props.navigation.Login();             
-    //       }
-    //     }catch(error){
-    //       alert(error);
-    //       this.props.navigation.Login();          
-    //     }
-    //   }
+          //alert(a)
+          if(thistoken!=null){
+            this.handletoken(thistoken);
+          }else{
+            this.props.navigation.Login();             
+          }
+        }catch(error){
+          alert(error);
+          this.props.navigation.Login();          
+        }
+      }
 
     // requestlogout(){
     //     var tkn=this.state.token;
@@ -107,7 +107,7 @@ class Logout extends Component{
                 let thistoken=await AsyncStorage.removeItem("token");
                 // await AsyncStorage.removeItem("token");
                 // let thtoken=await AsyncStorage.getItem("token");
-                console.log("In remove Token Function : "+thtoken+" ********** ")
+                console.log("In remove Token Function : "+thistoken+" ********** ")
                 alert("You are sucessfuly loggedout");
                 // this.props.navigation.navigate('AppStackNavigator',{},NavigationActions.navigate({ routeName: 'Login' }));
                 // this.props.navigation.navigate('Login');
@@ -130,7 +130,7 @@ class Logout extends Component{
                 console.log("after nav");
                 //alert(a) 
             }catch(error){
-                alert("token get error");
+                alert("token get error HHHH");
                 this.props.navigation.pop();
             }
       }

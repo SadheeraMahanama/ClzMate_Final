@@ -72,13 +72,13 @@ import About from '../../../Screens/About/About'
 import Rate from '../../../Screens/Rate/Rate'
  
 
-class App extends Component {
-  render() {
-    return (
-       <MyDrawer/>
-    );
-  }
-}
+// class App extends Component {
+//   render() {
+//     return (
+//        <MyDrawer/>
+//     );
+//   }
+// }
 
 const CustomerDrawerContentComponent = (props) => (
   <Container>
@@ -96,7 +96,8 @@ const CustomerDrawerContentComponent = (props) => (
   </Container>
 )
 
-const MyDrawer =  createDrawerNavigator({
+// const MyDrawer =  createDrawerNavigator({
+export default createDrawerNavigator({
   Home: {
         //screen: StudentTabNavigator, 
         screen: StudentTabNavigator, 
@@ -114,10 +115,10 @@ const MyDrawer =  createDrawerNavigator({
   },
   Logout: {
     screen: Logout,
-    navigationOptions: {
-      drawerLabel: 'Logout',
-      drawerIcon: ({ tintColor }) => <Icon name="power" size={17} color="#304ffe"/>,
-    }
+    // navigationOptions: {
+    //   drawerLabel: 'Logout',
+    //   drawerIcon: ({ tintColor }) => <Icon name="power" size={17} color="#304ffe"/>,
+    // }
   },
   Exit: {
     screen: Exit,
@@ -192,4 +193,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default App;
+//export default App;
